@@ -1,24 +1,14 @@
-const express = require("express");
+// const express = require("express");
+import express from "express";
+
 const app = express();
 const PORT = 8000;
-
-app.get("/", (req, res) => {
-  return res.json({ msg: "hellooo" });
-});
+// const router = require("./routes/movies_routes.js");
+import router from "./routes/movies_routes.js";
 
 //CRUD functionality for movies
 
-//R - for reading
-app.get("/movies", () => {});
-
-//C - for creating
-app.post("/movies", () => {});
-
-//U - for update
-app.patch("/movies", () => {});
-
-//D - for delete
-app.delete("/movies", () => {});
+app.use("/movies", router);
 
 app.listen(PORT, () => {
   console.log(`app is running on the port ${PORT}`);
