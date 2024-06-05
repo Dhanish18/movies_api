@@ -1,2 +1,5 @@
 node_modules
 gitnotes.txt
+
+#hide sensitive information
+.env

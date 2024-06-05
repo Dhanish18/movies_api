@@ -1,10 +1,11 @@
-// const express = require("express");
 import express from "express";
-
 const app = express();
 const PORT = 8000;
-// const router = require("./routes/movies_routes.js");
 import router from "./routes/movies_routes.js";
+import connectDB from "./lib/db.js";
+
+// connect DB
+connectDB();
 
 //CRUD functionality for movies
 
