@@ -4,6 +4,9 @@ const PORT = 8000;
 import router from "./routes/movies_routes.js";
 import connectDB from "./lib/db.js";
 
+//data understanding middleware
+app.use(express.json());
+
 // connect DB
 connectDB();
 
