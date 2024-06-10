@@ -6,7 +6,7 @@ import connectDB from "./lib/db.js";
 
 //data understanding middleware
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 
 // connect DB
 connectDB();

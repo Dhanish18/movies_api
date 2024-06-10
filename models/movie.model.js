@@ -1,8 +1,15 @@
 import { Schema, model } from "mongoose";
 
 const schema = new Schema({
-  title: String,
-  desc: String,
+  title: {
+    type: String,
+    require: true,
+    unique: true,
+  },
+  desc: {
+    type: String,
+    require: true,
+  },
 });
 
 //create your model
